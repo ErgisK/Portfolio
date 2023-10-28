@@ -28,6 +28,11 @@ section{
     align-items: center;
 
 }
+::placeholder{
+    color: white !important;
+    size: 10px;
+    opacity: 1;
+}
 h2{
     font-size: 2em;
     color: white;
@@ -50,7 +55,7 @@ h2{
     transition: .6s;
 }
 input:focus ~ label,
-input:valid ~ label{
+input:not(:placeholder-shown) ~ label{
    top: -5px 
 }
 .inputbox input{
